@@ -86,7 +86,7 @@
 		
 			
 			String commentSql = null;
-			commentSql = "SELECT comment_no commentNo, board_no boardNo, comment_content commentContent, member_id memberId, createdate, updatedate FROM COMMENT WHERE board_no = ? order by createdate DESC LIMIT ?, ?";
+			commentSql = "SELECT comment_no commentNo, board_no boardNo, comment_content commentContent, member_id memberId, createdate, updatedate FROM comment WHERE board_no = ? order by createdate DESC LIMIT ?, ?";
 			commentListStmt = conn.prepareStatement(commentSql);
 			commentListStmt.setInt(1, boardNo);
 			commentListStmt.setInt(2, startRow);
@@ -350,11 +350,13 @@
 								</table>
 								<div>
 								<%
-								if(session.getAttribute("loginMemberId").equals( board.getMemberId())){
-								%>
-									<a class="glanlink" href="<%=request.getContextPath()%>/board/modifyBoard.jsp?boardNo=<%=board.getBoardNo()%>">수정</a>
-									<a class="glanlink" href="<%=request.getContextPath()%>/board/removeBoardAction.jsp?boardNo=<%=board.getBoardNo()%>">삭제</a>
-								<%
+								if(session.getAttribute("loginMemberId") != null){
+									if(session.getAttribute("loginMemberId").equals(board.getMemberId())){
+									%>
+										<a class="glanlink" href="<%=request.getContextPath()%>/board/modifyBoard.jsp?boardNo=<%=board.getBoardNo()%>">수정</a>
+										<a class="glanlink" href="<%=request.getContextPath()%>/board/removeBoardAction.jsp?boardNo=<%=board.getBoardNo()%>">삭제</a>
+									<%
+									}
 								}
 								%>
 								</div>
