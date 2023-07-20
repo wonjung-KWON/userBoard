@@ -28,7 +28,7 @@
 	int totalRow = 0;
 	//DB에서 모델값 받기 ----------------------------------------------------------------//
 			String driver="org.mariadb.jdbc.Driver";
-			String dbUrl = "jdbc:mariadb://127.0.0.1:3306/userboard";
+			String dbUrl = "jdbc:mariadb://43.202.104.49:3306/userboard";
 			String dbId = "root"; 
 			String dbPw = "java1234";
 			Class.forName(driver);
