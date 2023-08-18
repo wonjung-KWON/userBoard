@@ -3,6 +3,7 @@
 <%@ page import = "java.net.*" %>
 <%@ page import = "java.util.*" %>
 <%
+request.setCharacterEncoding("utf-8");
 	//디버깅 메세지 색입히기
 	final String RED = "\u001B[41m";
 	final String GREEN = "\u001B[42m";

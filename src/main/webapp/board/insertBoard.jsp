@@ -79,6 +79,7 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
+                       <br>
                        <div class="row">
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-primary text-white mb-4">
@@ -188,7 +189,7 @@
 								</td>
 							</tr>
 						</table>
-						<button type="submit" class="btn btn-dark">수정하기</button>
+						<button type="submit" class="btn btn-dark">추가하기</button>
 					</form>
                         </div>
                     </div>

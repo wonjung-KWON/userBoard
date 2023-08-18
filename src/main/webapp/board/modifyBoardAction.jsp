@@ -4,6 +4,7 @@
 <%@ page import = "vo.*" %>
 <%@ page import = "java.util.*" %>
 <%
+request.setCharacterEncoding("utf-8");
 //세션 확인 로그인 안되어있으면 못들어오게	막고 리다이렉트로 다시 홈으로 돌려보낸다.
 	if(session.getAttribute("loginMemberId") == null){
 		response.sendRedirect(request.getContextPath()+"/home.jsp");

@@ -4,6 +4,7 @@
 <%@ page import = "vo.*" %>
 <%@ page import = "java.util.*" %>
 <%
+request.setCharacterEncoding("utf-8");
 //세션 확인 로그인 안되어있으면 못들어오게
 	if(session.getAttribute("loginMemberId") == null){
 		response.sendRedirect(request.getContextPath()+"/home.jsp");
@@ -49,7 +50,7 @@
 		
 		//localName이 사용가능한지 확인
 		
-		String checkSql = "SELECT count(*) FROM board where local_name=?";
+		String checkSql = "SELECT count(*) FROM local where local_name=?";
 		checkStmt = conn.prepareStatement(checkSql);
 		checkStmt.setString(1, localName);
 		rs = checkStmt.executeQuery();

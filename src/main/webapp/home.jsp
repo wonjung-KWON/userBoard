@@ -240,11 +240,11 @@
 										</tr>
 										<tr>
 											<td>아이디</td>
-											<td><input type="text" name="memberId" placeholder="username"></td>
+											<td><input type="text" name="memberId" placeholder="username" value="user1"></td>
 										</tr>
 										<tr>
 											<td>비밀번호</td>
-											<td><input type="password" name="memberPw" placeholder="PASSWORD"></td>
+											<td><input type="password" name="memberPw" placeholder="PASSWORD" value="1234"></td>
 										</tr>
 									</table>
 									<button type="submit" class="btn btn-dark">로그인</button>
@@ -360,7 +360,7 @@
 												}
 											%>
 									</table>
-									<div class="textcenter">
+									<div class="textcenter" style="text-align: center;">
 									<%
 										// 
 										int pageCount = 10;//페이지당 출력될 페이지 갯수

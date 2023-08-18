@@ -371,17 +371,18 @@
 									<form action="<%=request.getContextPath()%>/board/insertCommentAction.jsp" method="post">
 										<input type="hidden" name="boardNo" value="<%=board.getBoardNo()%>">
 										<input type="hidden" name="memberId" value="<%=loginMemberId%>">
-										
+										<br>
 										<table>
 											<tr>
-												
 												<th>댓글내용</th>
 												<td>
 													<textarea rows="2" cols="80" name="commentContent"></textarea>
 												</td>
+												<td>
+													<button type="submit" class="btn btn-dark">댓글생성</button>
+												</td>
 											</tr>
 										</table>
-										<button type="submit" class="btn btn-dark">댓글생성</button>
 									</form>
 							<% 
 								}else{
@@ -390,8 +391,8 @@
 							<% 		
 								}
 									
-									
 							%>
+							<br>
 							<!-- comment list 결과셋  *****************************************************************-->
 							<table class="table">
 								<tr>
